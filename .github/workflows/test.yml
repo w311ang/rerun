@@ -1,0 +1,13 @@
+name: test
+
+on:
+  workflow_run:
+    workflows: ["rerun"]
+    types:
+      - requested
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo
