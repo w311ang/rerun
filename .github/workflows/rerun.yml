@@ -10,4 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo
+      - uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.ACTIONS_TRIGGER_PAT }}
+          event-type: Rerun
