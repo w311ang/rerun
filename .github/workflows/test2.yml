@@ -2,11 +2,11 @@ name: test2
 
 on:
   repository_dispatch:
-    types: [rerun]
+    types: [rerun test2]
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo
+      - run: sleep 3s
