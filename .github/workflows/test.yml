@@ -5,6 +5,7 @@ on:
     workflows: ["rerun"]
     types:
       - requested
+  workflow_dispatch:
 
 jobs:
   build:
