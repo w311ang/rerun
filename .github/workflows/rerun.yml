@@ -11,7 +11,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo '${{ toJson(github.event) }}' | base64
+      - run: |
+          apt-get install gist
+          gist '${{ toJson(github.event) }}'
       #- uses: peter-evans/repository-dispatch@v1
       #  with:
       #    token: ${{ secrets.ACTIONS_TRIGGER_PAT }}
