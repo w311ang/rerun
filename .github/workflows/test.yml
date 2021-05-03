@@ -2,7 +2,7 @@ name: test
 
 on:
   repository_dispatch:
-    types: [rerun test]
+    types: [Rerun test]
   workflow_dispatch:
 
 jobs:
