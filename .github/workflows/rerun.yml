@@ -1,0 +1,13 @@
+name: rerun
+
+on:
+  workflow_run:
+    workflows: ["test","test2"]
+    types:
+      - completed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo
