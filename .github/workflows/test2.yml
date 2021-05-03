@@ -1,0 +1,12 @@
+name: test2
+
+on:
+  repository_dispatch:
+    types: [rerun]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo
