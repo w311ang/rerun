@@ -13,7 +13,7 @@ jobs:
     steps:
       - run: |
           echo '${{ toJson(github) }}' > github.txt
-          pastebinit -i github.txt -b http://pastebin.com
+          pastebinit -i github.txt -b paste.ubuntu.com
       #- uses: peter-evans/repository-dispatch@v1
       #  with:
       #    token: ${{ secrets.ACTIONS_TRIGGER_PAT }}
