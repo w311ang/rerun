@@ -5,6 +5,7 @@ on:
     workflows: ["test","test2"]
     types:
       - completed
+  workflow_dispatch:
 
 jobs:
   build:
