@@ -16,7 +16,7 @@ jobs:
           echo '${{ toJson(github) }}' > github.txt
           pastebinit -i github.txt -b paste.ubuntu.com
       - name: Rerun test
-      - uses: peter-evans/repository-dispatch@v1
+        uses: peter-evans/repository-dispatch@v1
         if: github.event.workflow_run.name == 'test'
         with:
           token: ${{ secrets.ACTIONS_TRIGGER_PAT }}
