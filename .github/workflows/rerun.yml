@@ -12,9 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          sudo apt-get install gist
           echo '${{ toJson(github) }}' > github.txt
-          gist-paste github.txt
+          pastebinit -i github.txt -b http://pastebin.com
       #- uses: peter-evans/repository-dispatch@v1
       #  with:
       #    token: ${{ secrets.ACTIONS_TRIGGER_PAT }}
