@@ -13,9 +13,8 @@ jobs:
     steps:
       - run: |
           sudo apt-get install gist
-          gist '$json'
-        env:
-          json: ${{ toJson(github) }}
+          echo '${{ toJson(github) }}' > github.txt
+          gist-paste github.txt
       #- uses: peter-evans/repository-dispatch@v1
       #  with:
       #    token: ${{ secrets.ACTIONS_TRIGGER_PAT }}
