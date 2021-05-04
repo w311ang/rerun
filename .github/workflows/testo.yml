@@ -12,9 +12,10 @@ jobs:
           python -c print test3
           python -c "
           import time,os,sys
-          for i in range(3):
+          for i in range(30):
             time.sleep(3)
             print(i)
             os.system('echo '+str(i))
           sys.exit(1)
           "
+        timeout-minutes: 1
