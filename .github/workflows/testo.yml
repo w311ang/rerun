@@ -12,4 +12,3 @@ jobs:
             print(i)
           "
           exit 1
-        #shell: sh
