@@ -6,7 +6,7 @@ jobs:
     timeout-minutes: 1
     steps:
       - run: |
-          python -hc "
+          python -uc "
           import time,os
           for i in range(30):
             time.sleep(3)
