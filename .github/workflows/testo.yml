@@ -12,9 +12,9 @@ jobs:
           python -c print test3
           python -c "
           import time,os
-          for i in range(20):
+          for i in range(3):
             time.sleep(3)
             print(i)
             os.system('echo '+str(i))
+          exit(1)
           "
-          exit 1
