@@ -5,10 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          python << EOL || true
+          python << EOL
           import time
-          for i in range(20):
+          for i in range(1):
             time.sleep(3)
             print(i)
           EOL
+          exit 1
         shell: sh
