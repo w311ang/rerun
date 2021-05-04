@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
+          . scl_source enable llvm-toolset-6.0 || true
           python << EOL
           import time
           for i in range(10):
