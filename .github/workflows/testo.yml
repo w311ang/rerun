@@ -5,11 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo 1
-          sleep 3
-          echo 2
-          sleep 3
-          echo 6
-          sleep 3
-          echo 6
-          sleep 60
+          apt-get install python
+          python << EOL
+          import time
+          for i in range(10):
+            time.sleep(3)
+            print(i)
+          EOL
