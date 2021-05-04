@@ -11,6 +11,6 @@ jobs:
             time.sleep(3)
             print(i)
             os.system('echo '+str(i))
-            os.system('python -c '+str(i))
+            os.system('python -c print '+str(i))
           "
           exit 1
