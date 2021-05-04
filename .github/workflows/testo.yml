@@ -6,9 +6,9 @@ jobs:
     steps:
       - run: |
           python -c "
-          import time
+          import time,os
           for i in range(1):
             time.sleep(3)
-            print(i)
+            os.system('echo '+str(i))
           "
           exit 1
