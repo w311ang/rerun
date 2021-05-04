@@ -15,7 +15,7 @@ jobs:
           import time,os,sys
           for i in range(30):
             time.sleep(3)
-            print(i)
+            print(i,flush=True)
             os.system('echo '+str(i))
           sys.exit(1)
           "
