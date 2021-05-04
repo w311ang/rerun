@@ -3,6 +3,7 @@ on: [workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 1
     steps:
       - run: |
           python -c print test1
@@ -18,4 +19,3 @@ jobs:
             os.system('echo '+str(i))
           sys.exit(1)
           "
-        timeout-minutes: 1
