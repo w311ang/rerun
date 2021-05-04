@@ -6,9 +6,8 @@ jobs:
     timeout-minutes: 1
     steps:
       - run: |
-          python -c "
-          import time,os,sys
-          sys.stdout.flush()
+          python -hc "
+          import time,os
           for i in range(30):
             time.sleep(3)
             print(i)
