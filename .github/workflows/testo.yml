@@ -8,8 +8,7 @@ jobs:
           . scl_source enable llvm-toolset-6.0 || true
           python << EOL
           import time
-          for i in range(10):
+          for i in range(20):
             time.sleep(3)
             print(i)
-          time.sleep(60)
           EOL
