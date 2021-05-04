@@ -11,10 +11,10 @@ jobs:
           sleep 3
           python -c print test3
           python -c "
-          import time,os
+          import time,os,sys
           for i in range(3):
             time.sleep(3)
             print(i)
             os.system('echo '+str(i))
-          exit(1)
+          sys.exit(1)
           "
