@@ -11,3 +11,4 @@ jobs:
             time.sleep(3)
             print(i)
           EOL
+        shell: sh
