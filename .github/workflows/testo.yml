@@ -9,6 +9,7 @@ jobs:
           import time,os
           for i in range(20):
             time.sleep(3)
+            print(i)
             os.system('echo '+str(i))
           "
           exit 1
