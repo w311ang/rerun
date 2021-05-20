@@ -6,11 +6,11 @@ on:
     types:
       - completed
   workflow_dispatch:
-  inputs:
-    group:
-      description: '分组名称'
-      default: 'ok'
-      required: true
+    inputs:
+      group:
+        description: '分组名称'
+        default: 'ok'
+        required: true
 
 jobs:
   build:
