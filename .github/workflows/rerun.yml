@@ -18,8 +18,8 @@ jobs:
     steps:
       - name: Output github
         env:
-          group: ${{ github.event.inputs.group }} || 'aa'
-          num: ${{ github.event.inputs.group }} || '-1'
+          group: ${{ github.event.inputs.group || 'aa' }}
+          num: ${{ github.event.inputs.group || '-1' }}
         run: |
           echo '${{ toJson(github) }}' > github.txt
           pastebinit -i github.txt -b paste.ubuntu.com
