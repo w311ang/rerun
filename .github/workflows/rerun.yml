@@ -17,6 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output github
+        env:
+          group: ${{ github.event.inputs.group }}
         run: |
           echo '${{ toJson(github) }}' > github.txt
           pastebinit -i github.txt -b paste.ubuntu.com
